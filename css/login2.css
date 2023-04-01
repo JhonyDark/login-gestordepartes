@@ -16,6 +16,11 @@ body {
     width: 100%;
 }
 
+.logo {
+	max-width: 15%;
+	margin-bottom: 20%;
+}
+
 h1 {
 	font-weight: bold;
 	margin: 0;
@@ -46,9 +51,9 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
-	color: #FFFFFF;
+	border: none;
+	background-color: black;
+	color: white;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 12px 45px;
@@ -68,6 +73,18 @@ button:focus {
 button.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
+}
+
+.register button, .inicio button {
+	margin: 30px;
+	background-color: black;
+	color: white;
+}
+
+button:hover {
+	background-color: orange;
+	color: white;
+	cursor: pointer;
 }
 
 form {
@@ -151,7 +168,7 @@ input {
 .overlay-container {
 	position: absolute;
 	top: 0;
-	left: 35%;
+	left: 30%;
 	width: 75%;
 	height: 100%;
 	overflow: hidden;
@@ -164,10 +181,7 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
-	background-repeat: no-repeat;
+	background: linear-gradient(60deg, rgba(0, 0, 19, 0.5), rgba(61, 61, 61, 0.3)), url('../images/fondo.jpg') center no-repeat;
 	background-size: cover;
 	background-position: 0 0;
 	color: #FFFFFF;
