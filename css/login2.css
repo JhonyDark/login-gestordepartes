@@ -17,8 +17,9 @@ body {
 }
 
 .logo {
-	max-width: 15%;
+	max-width: 100px;
 	margin-bottom: 20%;
+	cursor: pointer;
 }
 
 h1 {
@@ -62,6 +63,13 @@ button {
 	transition: transform 80ms ease-in;
 }
 
+.form-container button.active{
+	transform: scale(0);
+}
+.form-container button.active-register{
+	transform: scale(0);
+}
+
 button:active {
 	transform: scale(0.95);
 }
@@ -70,10 +78,10 @@ button:focus {
 	outline: none;
 }
 
-button.ghost {
+/* button.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
-}
+} */
 
 .register button, .inicio button {
 	margin: 30px;
@@ -286,4 +294,24 @@ footer i {
 footer a {
     color: #3c97bf;
     text-decoration: none;
+}
+
+@media (max-width: 575px) {
+	.form-container button.active, .form-container button.active-register{
+		margin-top: 10px;
+		transform: scale(1);
+	}
+
+	.overlay-container{
+		transform: scale(0) !important;
+	}
+	.sign-in-container, .sign-up-container{
+		width: 100%;
+	}
+	.container.right-panel-active .sign-up-container {
+		transform: translateX(0%);
+	}
+	.form-register{
+		padding: 50px 50px !important;
+	}	
 }
